@@ -12,19 +12,20 @@ Project to create a mini agent for the jan 2026 agent integrations embed program
 
 ## Setup
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
 
 ## Run
 Set your Datadog API key (for the org you want to send metrics into):
-export DD_API_KEY="..."
+`export DD_API_KEY="..."`
 
-Optionally set the site (defaults to datadoghq.com) in config.yaml:
-datadoghq.com
-datadoghq.eu
-us3.datadoghq.com
-us5.datadoghq.com
+Optionally set the site (defaults to datadoghq.com) in `config.yaml`:
+- datadoghq.com
+- datadoghq.eu
+- us3.datadoghq.com
+- us5.datadoghq.com
 
 Run:
-python -m miniagent --config config.yaml
+`python3 -m miniagent --config config.yaml`
