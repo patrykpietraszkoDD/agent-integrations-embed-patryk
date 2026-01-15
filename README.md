@@ -30,6 +30,13 @@ Optionally set the site (defaults to datadoghq.com) in `config.yaml`:
 Run:
 `python3 -m miniagent --config config.yaml`
 
+Once the miniagent runs, you should see the following metrics in your Datadog account:
+- miniagent.system.cpu.pct
+- miniagent.system.disk.used_pct
+- miniagent.system.mem.used_pct
+- miniagent.uptime
+
+
 ---
 ## Considerations for the future
 If I had more time I would attempt to implement the following:
