@@ -1,0 +1,21 @@
+agent:
+  interval_seconds: 10
+  site: "datadoghq.com"          # or datadoghq.eu, us3.datadoghq.com, etc.
+  api_key_env: "DD_API_KEY"      # env var to read the API key from
+  hostname: null                 # if null, auto-detect
+  tags:
+    - "env:dev"
+    - "project:agent-integrations-embed"
+
+checks:
+  - name: system
+    enabled: true
+    interval_seconds: 10
+    config:
+      disk_paths: ["/"]          # you can add more mountpoints
+
+  - name: uptime
+    enabled: true
+    interval_seconds: 30
+    config:
+      metric_name: "miniagent.uptime"
