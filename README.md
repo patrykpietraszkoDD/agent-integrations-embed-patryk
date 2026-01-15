@@ -29,3 +29,12 @@ Optionally set the site (defaults to datadoghq.com) in `config.yaml`:
 
 Run:
 `python3 -m miniagent --config config.yaml`
+
+---
+## Considerations for the future
+If I had more time I would attempt to implement the following:
+- batching metrics to reduce submission overhead
+- adding retry and backoff behavior
+- introducing concurrency with execution limits
+- emitting self-metrics for agent health and observability
+- separating integration configuration files
